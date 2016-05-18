@@ -15,14 +15,14 @@ go install github.com/hammerandchisel/airhornbot/cmd/bot
  **Then run the following command:**
 
 ```
-bot -r "localhost:6379" -t "MY_BOT_ACCOUNT_TOKEN" -o OWNER_ID
+./bin/bot -r "localhost:6379" -t "MY_BOT_ACCOUNT_TOKEN" -o OWNER_ID
 ```
 
 ### Running the Web Server
 First install the webserver: `go install github.com/hammerandchisel/airhornbot`, then run `make static`, finally run:
 
 ```
-./airhornweb -r "localhost:6379" -i MY_APPLICATION_ID -s 'MY_APPLICATION_SECRET"
+./bin/webserver -r "localhost:6379" -i MY_APPLICATION_ID -s 'MY_APPLICATION_SECRET"
 ```
 
 Note, the webserver requires a redis instance to track statistics
